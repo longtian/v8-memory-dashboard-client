@@ -9,6 +9,7 @@ const instance = uuid.v4();
 const tick = (options)=>{
     const data ={};
     const urlInfo = url.parse(options.url);
+    data.timestamp = Date.now();
     data.heapSpaceStatistics = v8.getHeapSpaceStatistics();
     data.memoryUsage = process.memoryUsage();
     data.versions = process.versions;
