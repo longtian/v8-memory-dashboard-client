@@ -19,10 +19,10 @@ const tick = (options)=>{
     data.isMaster = !! cluster.isMaster;
     data.isWorker = !! cluster.isWorker;
     const request = https.request({
-        protocol:'https:',
-        method:'PUT',
+        protocol: 'https:',
+        method: 'PUT',
         host: urlInfo.host,
-        path:`${urlInfo.path}.json`
+        path: urlInfo.path
     });
     request.write(JSON.stringify(data));
     request.pipe(process.stdout);
