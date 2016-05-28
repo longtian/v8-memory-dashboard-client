@@ -5,7 +5,7 @@
 
 > 使用 `REST API` 上传 `v8` 相关数据到 `野狗`
 
-[](./screenshot.png)
+![](./screenshot.png)
 
 ## 系统要求
 
