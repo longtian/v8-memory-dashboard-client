@@ -1,0 +1,26 @@
+{
+  "name": "v8-memory-dashboard-client",
+  "version": "0.0.0",
+  "description": "client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyvernnot/v8-memory-dashboard-client.git"
+  },
+  "keywords": [
+    "v8",
+    "wilddog"
+  ],
+  "author": "wyvernnot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernnot/v8-memory-dashboard-client/issues"
+  },
+  "homepage": "https://github.com/wyvernnot/v8-memory-dashboard-client#readme",
+  "dependencies": {
+    "uuid": "^2.0.2"
+  }
+}
