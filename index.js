@@ -18,6 +18,9 @@ const tick = (options)=>{
     data.arch = os.arch();
     data.isMaster = !! cluster.isMaster;
     data.isWorker = !! cluster.isWorker;
+    data.freemem=os.freemem();
+    data.totalmem = os.totalmem();
+    data.cpus = os.cpus();
     const request = https.request({
         protocol: 'https:',
         method: 'PUT',
