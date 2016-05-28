@@ -20,7 +20,8 @@
     "url": "https://github.com/wyvernnot/v8-memory-dashboard-client/issues"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "README.md"
   ],
   "homepage": "https://github.com/wyvernnot/v8-memory-dashboard-client#readme",
   "dependencies": {
