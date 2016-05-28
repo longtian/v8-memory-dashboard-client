@@ -3,12 +3,12 @@ const os = require('os');
 const https = require('https');
 const uuid = require('uuid');
 const cluster = require('cluster');
+const url = require('url');
 
 const instance = uuid.v4();
 const tick = (options)=>{
     const data ={};
-    const uid = options.uid;
-    const host = options.host;
+    const urlInfo = url.parse(options.url);
     data.heapSpaceStatistics = v8.getHeapSpaceStatistics();
     data.memoryUsage = process.memoryUsage();
     data.versions = process.versions;
@@ -21,8 +21,8 @@ const tick = (options)=>{
     const request = https.request({
         protocol:'https:',
         method:'PUT',
-        host:host,
-        path:`/${uid}/${instance}.json`
+        host: urlInfo.host,
+        path:`${urlInfo.path}.json`
     });
     request.write(JSON.stringify(data));
     request.pipe(process.stdout);
